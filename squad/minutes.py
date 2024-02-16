@@ -286,7 +286,7 @@ plt.xlabel('')
 plt.ylabel('% Minutes jouées')
 
 # Modify the x-axis labels to add "*" after Sawadogo and Camara
-x_labels = [label + "*" if label in ["Camara", "Sawadogo","Omeragic"] else label for label in sorted_percentage_total.index]
+x_labels = [label + "*" if label in ["Camara", "Sawadogo","Omeragic","TouatiW"] else label for label in sorted_percentage_total.index]
 bar_plot.set_xticklabels(x_labels, rotation=90)
 
 plt.xticks(rotation=90)
@@ -296,7 +296,7 @@ plt.yticks(range(0, 101, 10))  # Set y-axis ticks with a range of 10
 # Add the values on top of the bars with reduced font size and 1 decimal place
 # For "Camara et Sawadogo", only the minutes are displayed, not the percentage.
 for i, (player, percentage, minutes) in enumerate(zip(sorted_percentage_total.index, sorted_percentage_total.values, total_minutes_played[sorted_percentage_total.index].values)):
-    if player in ["Camara", "Sawadogo","Omeragic"]:
+    if player in ["Camara", "Sawadogo","Omeragic","TouatiW"]:
         # Only show the minutes for Camara and Sawadogo
         bar_plot.text(i, percentage + 1, f"{minutes:.0f}m", ha='center', va='bottom', fontsize=5)
     else:

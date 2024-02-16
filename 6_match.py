@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 from matplotlib.patches import Arc
 import seaborn as sns
+
 from mplsoccer.pitch import Pitch, VerticalPitch
 import tqdm
 from matplotlib.animation import FuncAnimation, writers
@@ -20,14 +21,12 @@ import matplotlib.font_manager
 from IPython.core.display import HTML
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 import cmasher as cmr
 from mplsoccer import VerticalPitch
 from mplsoccer.utils import FontManager
 from highlight_text import fig_text
 from pywaffle import Waffle # PyWaffle Documentation --> https://buildmedia.readthedocs.org/media/pdf/pywaffle/latest/pywaffle.pdf
-import matplotlib.pyplot as plt #Matplotlib pyplot to plot the charts
 import matplotlib as mpl
 from highlight_text import htext #used for highlighting the title
 import matplotlib.font_manager as fm
@@ -39,7 +38,6 @@ import os
 from matplotlib.patches import FancyArrowPatch
 import matplotlib.patches as mpatches
 from urllib.request import urlopen
-import matplotlib.pyplot as plt
 from PIL import Image
 from mplsoccer import PyPizza, add_image, FontManager
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas

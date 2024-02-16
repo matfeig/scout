@@ -10,12 +10,6 @@ from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 import numpy as np
 import matplotlib.pyplot as plt
-from itertools import product
-import matplotlib.pyplot as plt
-from itertools import product
-import seaborn as sns
-import matplotlib.pyplot as plt
-from pandas.plotting import table
 import seaborn as sns
 from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
@@ -34,13 +28,9 @@ import matplotlib.pyplot as plt
 import calendar
 import numpy as np
 import datetime
-import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-import calendar
-import datetime
-import pandas as pd
-from matplotlib.patches import Wedge
-from datetime import datetime
+
+
 
 
 # Chemin vers votre fichier JSON
@@ -80,14 +70,14 @@ print(df)
 ##########################################################################################
 
 # Filter the dataframe based on the provided date range
-start_date = "2024-02-14"
-end_date = "2024-02-14"
+start_date = "2024-02-15"
+end_date = "2024-02-15"
 df= df[(df["Date"] >= start_date) & (df["Date"] <= end_date)]
 
-#df= df[(df["Equipe"] == 'Pro')]
+df= df[(df["Equipe"] == 'Pro')]
 
-df= df[(df["Equipe"] != 'Pro')]
-df = df.sort_values('Equipe')
+# df= df[(df["Equipe"] != 'Pro')]
+# df = df.sort_values('Equipe')
 
 #########################################
 # Selecting only the specified columns
@@ -170,8 +160,6 @@ pdf_path
 
 ##############################################################################################################
 
-
-
 # Convert 'Date' to datetime for easier filtering and filter the data for "Antunes"
 df['Date'] = pd.to_datetime(df['Date'])
 antunes_data = df[df['Nom'] == 'Antunes']
@@ -181,7 +169,6 @@ january_antunes = antunes_data[(antunes_data['Date'] >= '2024-01-01') & (antunes
 
 # Correcting the creation of the date_motif_map dictionary
 date_motif_map = {row['Date'].date(): row['Motif consultation'] for index, row in january_antunes.iterrows()}
-
 
 
 # Revised function with enhanced visual design
@@ -249,7 +236,6 @@ def plot_calendar_circles_color(year, month, date_motif_map,game_days):
     ax_image = inset_axes(ax, width="100%", height="100%", loc='upper left', borderpad=1)
     ax_image.imshow(img)
     ax_image.axis('off')  # Hide axes of inset_axes
-    
     
     plt.show()
 
