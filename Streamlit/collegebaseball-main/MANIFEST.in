@@ -1,3 +1,0 @@
-include DESCRIPTION.rst
-include *.parquet
-recursive-include collegebaseball/data *
