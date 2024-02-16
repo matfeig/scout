@@ -10,11 +10,8 @@ import streamlit as st
 import os
 
 # Use an environment variable to specify the path
-<<<<<<< HEAD
+
 csv_file_path = os.getenv('CSV_FILE_PATH', '/Users/matfeig/Desktop/scouting/database.csv')
-=======
-csv_file_path = os.getenv('CSV_FILE_PATH', '/Users/matfeig/Library/CloudStorage/Dropbox/SFC/Database/recrutement/database.csv')
->>>>>>> 8c07182a0a373d27970d2386ef9fad16b672b6d9
 
 df = pd.read_csv(csv_file_path)
 
