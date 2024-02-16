@@ -25,8 +25,6 @@ df_selected  = df_selected.rename(columns={'Prénom du joueur': 'Prenom'})
 df_selected  = df_selected.rename(columns={'Nom du joueur': 'Nom'})
 df_selected  = df_selected.rename(columns={'Commentaire / Overview': 'Commentaire'})
 
-#df_selected.to_csv('file_name.csv')
-
 
 ###########################################################################################
 
