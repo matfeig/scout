@@ -7,9 +7,13 @@ Created on Wed Feb 14 17:06:43 2024
 """
 import pandas as pd
 import streamlit as st
+import os
 
+# Use an environment variable to specify the path
+csv_file_path = os.getenv('CSV_FILE_PATH', '/Users/matfeig/Library/CloudStorage/Dropbox/SFC/Database/recrutement/database.csv')
 
-df = pd.read_csv("/Users/matfeig/Library/CloudStorage/Dropbox/SFC/Database/recrutement/database.csv")
+df = pd.read_csv(csv_file_path)
+
 
 ##########################################################################################
 
