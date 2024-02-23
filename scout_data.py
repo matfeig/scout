@@ -50,5 +50,50 @@ filtered_df = filtered_df.iloc[::-1].reset_index(drop=True)
 # Créer l'interface utilisateur avec Streamlit
 st.title('Scouting DataBase | Servette FC')
 
+
+# Filtres
+position_options = st.multiselect('Filtrer par Position', options=filtered_df['Position'].unique())
+apercu_options = st.multiselect('Filtrer par Aperçu', options=filtered_df['Aperçu'].unique())
+
+# Appliquer les filtres
+if position_options:
+    filtered_df = filtered_df[filtered_df['Position'].isin(position_options)]
+if apercu_options:
+    filtered_df = filtered_df[filtered_df['Aperçu'].isin(apercu_options)]
+
 st.write("Liste des joueurs")
 st.table(filtered_df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
