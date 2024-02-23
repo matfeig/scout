@@ -11,9 +11,14 @@ import os
 
 # Use an environment variable to specify the path
 
-csv_file_path = os.getenv('CSV_FILE_PATH', '/Users/matfeig/Desktop/scouting/database.csv')
+# csv_file_path = os.getenv('CSV_FILE_PATH', '/Users/matfeig/Desktop/scouting/database.csv')
 
-df = pd.read_csv(csv_file_path)
+# df = pd.read_csv(csv_file_path)
+
+csv_file_path = os.getenv('database.csv')
+
+df = pd.read_csv("database.csv")
+
 
 
 ##########################################################################################
