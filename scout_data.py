@@ -96,7 +96,7 @@ if st.session_state["logged_in"]:
 
 
     st.write("Liste des joueurs")
-    st.table(filtered_df.head(6))
+    st.table(filtered_df.head(15))
    
 
     # Input pour la demande de l'utilisateur
